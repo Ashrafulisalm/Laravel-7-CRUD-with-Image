@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::resource('contacts','ContactController');
+
+Route::get('/contacts','ContactController@index');
+Route::post('/contact/add','ContactController@store')->name('add');

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a03f6cc-0c60-402d-9ca0-572e1da0e2da" name="Default Changelist" comment="" />
+    <list default="true" id="0a03f6cc-0c60-402d-9ca0-572e1da0e2da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Contact/contacts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +18,12 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="advancedlaravel" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -111,6 +123,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1btMgmVeTg209zMPDeBHPdzJEIy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -139,7 +152,11 @@
       <option name="presentableId" value="Default" />
       <updated>1589447049085</updated>
       <workItem from="1589447054721" duration="2190000" />
-      <workItem from="1589455049594" duration="116000" />
+      <workItem from="1589455049594" duration="716000" />
+      <workItem from="1589474282425" duration="25000" />
+      <workItem from="1589559478991" duration="824000" />
+      <workItem from="1589562375811" duration="544000" />
+      <workItem from="1589563059403" duration="10111000" />
     </task>
     <servers />
   </component>
@@ -147,9 +164,29 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1589455124281">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1589474311856">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589455124281" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589474311856" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1589562970727">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589562970727" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1589562970727">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589562970727" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1589562970726">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589562970726" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1589562970727">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589562970727" />
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1589562373536">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589562373535" />
   </component>
 </project>
