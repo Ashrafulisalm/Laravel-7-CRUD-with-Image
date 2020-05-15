@@ -115,8 +115,10 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,$ids)
     {
-        //
+        Image::find($id)->delete();
+        Contact::find($ids)->delete();
+        return redirect()->back();
     }
 }

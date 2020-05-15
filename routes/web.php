@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 Route::get('/contacts','ContactController@index');
 Route::post('/contact/add','ContactController@store')->name('add');
+Route::any('/contacts/{id}/{ids}','ContactController@destroy')->name('contacts.destroy');

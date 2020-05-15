@@ -42,8 +42,8 @@
                         <td>{{$row->contact->address}}</td>
                         <td><img src="{{\Illuminate\Support\Facades\URL::to($row->image)}}" width="80" height="100"></td>
                         <td>
-                            <a href="{{url('')}}" class="btn btn-primary btn-sm">Edit</a>
-                            <a href="{{url('')}}" class="btn btn-danger btn-sm">Delete</a>
+                            <a href="{{url('/contacts/'.$row->id.'/edit')}}" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="{{url('/contacts/'.$row->id.'/'.$row->contact->id)}}" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
                 @endforeach
