@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0a03f6cc-0c60-402d-9ca0-572e1da0e2da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Contact.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_15_162049_create_contacts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_15_162049_create_contacts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_15_162329_create_images_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Contact/contacts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Contact/contacts.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -155,7 +159,11 @@
       <workItem from="1589474282425" duration="25000" />
       <workItem from="1589559478991" duration="824000" />
       <workItem from="1589562375811" duration="544000" />
-      <workItem from="1589563059403" duration="13128000" />
+      <workItem from="1589563059403" duration="13180000" />
+      <workItem from="1589621886661" duration="2559000" />
+      <workItem from="1589640471330" duration="876000" />
+      <workItem from="1589645708945" duration="3166000" />
+      <workItem from="1589655841743" duration="1764000" />
     </task>
     <servers />
   </component>
@@ -183,9 +191,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589562970727" />
-    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1589562373536">
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1589655938911">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589562373535" />
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589655938911" />
   </component>
 </project>

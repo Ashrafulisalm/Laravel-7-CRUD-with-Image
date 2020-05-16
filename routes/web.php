@@ -20,5 +20,8 @@ Route::get('/', function () {
 //Route::resource('contacts','ContactController');
 
 Route::get('/contacts','ContactController@index');
-Route::post('/contact/add','ContactController@store')->name('add');
-Route::any('/contacts/{id}/{ids}','ContactController@destroy')->name('contacts.destroy');
+Route::post('/contacts/store','ContactController@store')->name('contacts.store');
+Route::any('/contacts/del/{id}','ContactController@destroy')->name('contacts.destroy');
+Route::get('/contacts/edit/{id}','ContactController@edit')->name('contacts.edit');
+Route::post('/contacts/update/{id}','ContactController@update')->name('contacts.update');
+

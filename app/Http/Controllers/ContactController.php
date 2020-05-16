@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
-use App\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -17,7 +16,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $data=Image::all();
+        $data=Contact::all();
         return view('Contact.contacts',compact('data'));
     }
 
@@ -28,7 +27,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        echo "Hello Create";
+
     }
 
     /**
@@ -39,16 +38,11 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-
         $con=new Contact;
         $con->name=$request->name;
         $con->email=$request->email;
         $con->phone=$request->phone;
         $con->address=$request->address;
-
-
-
-        $imgs=new Image;
         $img=$request->file('image');
         if($img){
             $img_n=Str::random('10');
@@ -59,17 +53,11 @@ class ContactController extends Controller
             $success=$img->move($path,$image_fn);
 
             if($success){
+                $con->image=$img_url;
                 $con->save();
-                $insertId=$con->id;
-                $imgs->contact_id=$insertId;
-                $imgs->image=$img_url;
-                $imgs->save();
-
-                //console.log("Data inserted");
                 return redirect()->back();
             } else {
                 return redirect()->back();
-               // console.log("Something Wrong");
             }
         }
 
@@ -94,7 +82,8 @@ class ContactController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data=Contact::find($id);
+       return view('Contact.edit',compact('data'));
     }
 
     /**
@@ -106,7 +95,34 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $con=Contact::find($id);
+        $con->name=$request->name;
+        $con->email=$request->email;
+        $con->phone=$request->phone;
+        $con->address=$request->address;
+        $img=$request->file('image');
+        if($img){
+            @unlink($request->Old_image);
+            $img_n=Str::random('10');
+            $ext=strtolower($img->getClientOriginalExtension());
+            $image_fn=$img_n.'.'.$ext;
+            $path="image/";
+            $img_url=$path.$image_fn;
+            $success=$img->move($path,$image_fn);
+
+            if($success){
+                $con->image=$img_url;
+                $con->save();
+                return redirect('/contacts');
+            } else {
+
+                return redirect('/contacts');
+            }
+        } else {
+            $con->image=$request->Old_image;
+            $con->save();
+            return redirect('/contacts');
+        }
     }
 
     /**
@@ -115,10 +131,9 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id,$ids)
+    public function destroy($id)
     {
-        Image::find($id)->delete();
-        Contact::find($ids)->delete();
+        Contact::findOrFail($id)->delete();
         return redirect()->back();
     }
 }

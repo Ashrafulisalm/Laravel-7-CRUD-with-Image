@@ -6,6 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <title>Contacts</title>
 </head>
@@ -35,15 +38,15 @@
             <tbody>
                 @foreach($data as $row)
                     <tr>
-                        <td>{{$row->contact->id}}</td>
-                        <td>{{$row->contact->name}}</td>
-                        <td>{{$row->contact->email}}</td>
-                        <td>{{$row->contact->phone}}</td>
-                        <td>{{$row->contact->address}}</td>
+                        <td>{{$row->id}}</td>
+                        <td>{{$row->name}}</td>
+                        <td>{{$row->email}}</td>
+                        <td>{{$row->phone}}</td>
+                        <td>{{$row->address}}</td>
                         <td><img src="{{\Illuminate\Support\Facades\URL::to($row->image)}}" width="80" height="100"></td>
                         <td>
-                            <a href="{{url('/contacts/'.$row->id.'/edit')}}" class="btn btn-primary btn-sm">Edit</a>
-                            <a href="{{url('/contacts/'.$row->id.'/'.$row->contact->id)}}" class="btn btn-danger btn-sm">Delete</a>
+                            <a href="{{url('/contacts/edit/'.$row->id)}}"  class="btn btn-primary btn-sm" >Edit</a>
+                            <a href="{{url('/contacts/del/'.$row->id)}}" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
                 @endforeach
@@ -62,10 +65,10 @@
 <div class="modal fade" id="contactModal" tabindex="-1" role="dialog"  aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form action="{{url('/contact/add')}}" method="post" enctype="multipart/form-data">
+            <form action="{{url('/contacts/store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Create Contact</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -112,9 +115,12 @@
     </div>
 </div>
 
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
 <script src="{{asset('js/jQuery.js')}}"></script>
+<script type="text/javascript"></script>
 </body>
 </html>
